@@ -25,12 +25,23 @@ class Graph{
 
 int main(){
 Graph g;
-
+ 
 g.addEdge(0, 1, 5);
 g.addEdge(0, 2, 8);
 g.addEdge(1, 2, 9);
 g.addEdge(1, 3, 2);
 g.addEdge(3, 2, 6);
+
+ //Our graph looks like this 
+/*
+     5   
+  1-----0
+  | \   |
+2 |  \9 |8
+  |   \ |
+  3-----2
+
+*/
 // g.printAdj();
 
 //Here we are taking 4 nodes, so we are maintaining the distance vector  
