@@ -1,7 +1,7 @@
 # Dijkstra-Algorithm
 This repository contains an implementation of Dijkstra's Algorithm in C++ by Aditya Kharmale. Dijkstra's Algorithm is used to find the shortest path between nodes in a graph.
 
-Usage
+**Usage**
 To use this implementation, follow these steps:
 
 Clone the repository to your local machine or download the source code file.
