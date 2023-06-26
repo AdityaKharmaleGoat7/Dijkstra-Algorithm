@@ -44,7 +44,19 @@ void addEdge(int u, int v, int weight){
     p = make_pair(u, weight);
     adj[v].push_back(p);
 }
-Additional Notes
+
+**Here are some situations where Dijkstra's algorithm may not be the best choice:**
+**Negative edge weights:** Dijkstra's algorithm assumes that all edge weights are non-negative. If there are negative edge weights in the graph, the algorithm may produce incorrect results. In such cases, algorithms like Bellman-Ford or Floyd-Warshall are more appropriate.
+
+**Large graphs:** Dijkstra's algorithm has a time complexity of O((V + E) log V), where V is the number of vertices and E is the number of edges. In very large graphs with millions of vertices and edges, the algorithm can become slow and impractical. Alternative algorithms like A* search, which use heuristics to guide the search, can be more efficient.
+
+**Non-uniform edge costs**: Dijkstra's algorithm assumes that the cost of traversing each edge is the same. In some cases, the edge costs may vary depending on certain factors or conditions. For example, in road networks, the travel time may depend on traffic conditions or road quality. In such scenarios, algorithms like Contraction Hierarchies or Customized Route Planning algorithms may be more appropriate.
+
+**Sparse graphs with negative cycles:** Dijkstra's algorithm can handle graphs with negative edge weights, as long as there are no negative cycles. However, if the graph contains negative cycles, Dijkstra's algorithm may enter an infinite loop. In such cases, algorithms like Bellman-Ford or the use of topological sorting are more appropriate.
+
+These are some scenarios where Dijkstra's algorithm may not be the most suitable choice. It's important to consider the characteristics of the graph and the specific requirements of the problem at hand to choose the most appropriate algorithm.
+
+**Additional Notes**
 The code includes a commented-out function, printAdj(), which can be used to print the adjacency list representation of the graph.
 The algorithm assumes that the graph is connected and does not contain negative edge weights.
 This implementation uses a set (st) to efficiently find the node with the minimum distance in each iteration.
